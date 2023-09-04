@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block header %}
+    <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Nynlabs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggler"
+                aria-controls="toggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggler">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="{% url 'crawl' %}">Home</a>
+                    
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="{% url 'admin' %}">Home</a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+{% endblock header %}
+{% block content %}
+{% autoescape off %}{{ object.description }} {% endautoescape %}
+{% endblock content %}
